@@ -9,6 +9,7 @@ import partner3 from "../../assets/images/client-logos/partner3.png"
 import partner4 from "../../assets/images/client-logos/partner4.png"
 import partner5 from "../../assets/images/client-logos/partner5.png"
 import SlideUp from '../../utlits/animations/slideUp';
+import cv from '../../assets/documents/resume.pdf';
 
 const Hero = () => {
     return (
@@ -20,14 +21,14 @@ const Hero = () => {
                         <SlideUp>
                             <div className="about-image-part">
                                 <img src={profile} alt="About Me" />
-                                <h2>Bentos Walker</h2>
-                                <p>I am a Web Designer based in san francisco.</p>
+                                <h2>Ntando Mngomezulu</h2>
+                                <p>I am a Software Engineer based in Cape Town.</p>
                                 <div className="about-social text-center">
                                     <ul>
-                                        <li><Link to=""><RiFacebookCircleFill size={20} /></Link></li>
-                                        <li><Link to=""><RiTwitterXLine size={20} /></Link></li>
-                                        <li><Link to=""><RiLinkedinFill size={20} /></Link></li>
-                                        <li><Link to=""><RiGithubLine size={20} /></Link></li>
+                                        {/* <li><Link to=""><RiFacebookCircleFill size={20} /></Link></li> */}
+                                        {/* <li><Link to=""><RiTwitterXLine size={20} /></Link></li> */}
+                                        <li><Link to="https://www.linkedin.com/in/ntandoyabalele-mngomezulu-1434a2234/"><RiLinkedinFill size={20} /></Link></li>
+                                        <li><Link to="https://github.com/NtandoMgo"><RiGithubLine size={20} /></Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -40,15 +41,18 @@ const Hero = () => {
                             <div className="about-content-part">
                                 <p>Hello There!</p>
                                 <h2>
-                                    I’m Bentos Walker, a product designer crafting user-centric design with pixel-perfect precision.
+                                    I’m Ntando, a Software Engineer crafting impactful solutions in technology.
                                 </h2>
                                 <div className="adress-field">
                                     <ul>
                                         <li className='d-flex align-items-center'><i><RiCircleFill size={14} /></i> Available for Freelancing</li>
                                     </ul>
                                 </div>
-                                <div className="hero-btns">
+                                {/* <div className="hero-btns">
                                     <Link to="/contact" className="theme-btn">Download CV <i><RiDownloadLine size={16} /></i> </Link>
+                                </div> */}
+                                <div className="hero-btns">
+                                    <a href={cv} className="theme-btn" download>Download CV <i><RiDownloadLine size={16} /></i> </a>
                                 </div>
                             </div>
                         </SlideUp>
