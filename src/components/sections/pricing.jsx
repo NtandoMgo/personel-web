@@ -1,8 +1,8 @@
-import React from 'react'
-import { priceData } from '../../utlits/fackData/priceData'
-import { Link } from 'react-router-dom'
-import { RiArrowRightLine, RiShoppingBasketLine } from '@remixicon/react'
-import SlideUp from '../../utlits/animations/slideUp'
+import React from 'react';
+import { priceData } from '../../utlits/fackData/priceData';
+import { Link } from 'react-router-dom';
+import { RiArrowRightLine, RiShoppingBasketLine } from '@remixicon/react';
+import SlideUp from '../../utlits/animations/slideUp';
 
 const Pricing = () => {
     return (
@@ -20,18 +20,19 @@ const Pricing = () => {
                         </div>
                     </div>
                     <div className="row justify-content-center">
-                        {priceData.map(({ features, id, price, sortInfo, title }) => <Card key={id} id={id} features={features} price={price} sortInfo={sortInfo} title={title} />)}
+                        {priceData.map(({ features, id, price, sortInfo, title }) => (
+                            <Card key={id} id={id} features={features} price={price} sortInfo={sortInfo} title={title} />
+                        ))}
                     </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
-export default Pricing
+export default Pricing;
 
-
-const Card = ({id, title, price, sortInfo, features }) => {
+const Card = ({ id, title, price, sortInfo, features }) => {
     return (
         <div className="col-lg-4 col-md-6">
             <SlideUp delay={id}>
@@ -39,18 +40,20 @@ const Card = ({id, title, price, sortInfo, features }) => {
                     <div className="pricing-header">
                         <h4 className="title">{title}</h4>
                         <p className="save-percent" dangerouslySetInnerHTML={{ __html: sortInfo }} />
-                        <span className="price">{price}</span>
+                        <span className="price">${price}</span>
                     </div>
                     <div className="pricing-details">
                         <ul>
-                            {
-                                features.map(({ id, feature, unable }) => <li key={id} className={`${unable ? "unable" : ""}`}><i> <RiArrowRightLine size={14} /></i>{feature}</li>)
-                            }
+                            {features.map(({ id, feature, isAvailable }) => (
+                                <li key={id} className={`${!isAvailable ? "unable" : ""}`}>
+                                    <i><RiArrowRightLine size={14} /></i>{feature}
+                                </li>
+                            ))}
                         </ul>
-                        <Link to="#" className="theme-btn">Order Now <i><RiShoppingBasketLine size={16} /></i> </Link>
+                        <Link to="#" className="theme-btn">Order Now <i><RiShoppingBasketLine size={16} /></i></Link>
                     </div>
                 </div>
             </SlideUp>
         </div>
-    )
+    );
 }

@@ -3,32 +3,32 @@ export const priceData = [
         id: 1,
         title: "Basic",
         price: "15",
-        sortInfo: "Have design ready to build? <br> or small budget",
+        sortInfo: "Have design ready to build? Or on a small budget.",
         features: [
             {
                 id: 1,
                 feature: "Need your wireframe",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 2,
                 feature: "Design with Figma, Framer",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 3,
                 feature: "Product Design",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 4,
                 feature: "Digital Marketing",
-                unable: true
+                isAvailable: false
             },
             {
                 id: 5,
                 feature: "Custom Support",
-                unable: true
+                isAvailable: false
             }
         ]
     },
@@ -36,32 +36,32 @@ export const priceData = [
         id: 2,
         title: "Standard",
         price: "59",
-        sortInfo: "  Not have any design? <br> Leave its for me",
+        sortInfo: "Don't have any design? Leave it to me.",
         features: [
             {
                 id: 1,
                 feature: "Website Design",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 2,
                 feature: "Mobile Apps Design",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 3,
                 feature: "Product Design",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 4,
                 feature: "Digital Marketing",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 5,
                 feature: "Custom Support",
-                unable: true
+                isAvailable: false
             }
         ]
     },
@@ -69,34 +69,33 @@ export const priceData = [
         id: 3,
         title: "Gold",
         price: "100",
-        sortInfo: "Have design ready to build? <br> or small budget",
+        sortInfo: "Premium package with complete features.",
         features: [
             {
                 id: 1,
                 feature: "Website Design",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 2,
                 feature: "Mobile Apps Design",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 3,
                 feature: "Product Design",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 4,
                 feature: "Digital Marketing",
-                unable: false
+                isAvailable: true
             },
             {
                 id: 5,
                 feature: "Custom Support",
-                unable: false
+                isAvailable: true
             }
         ]
     },
-
-]
+];
