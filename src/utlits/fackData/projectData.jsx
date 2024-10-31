@@ -25,7 +25,7 @@ export const projectsData = [
     {
         id: 4,
         src: work_4,
-        category: "Mobile Application Design",
+        category: "Web Development",
         title: "Student Grade Calculator",
     },
     {
