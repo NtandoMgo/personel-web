@@ -7,6 +7,7 @@ import Service from "../pages/service";
 import SingleProject from "../pages/single-project";
 import Works from "../pages/works";
 import UASingleProject from "../pages/uas-single-project";
+import EMSSingleProject from "../pages/ems-single-project";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: "/projects/2",
         element: <UASingleProject/>
+      },
+      {
+        path: "/projects/3",
+        element: <EMSSingleProject/>
       },
       {
         path: "/works",
